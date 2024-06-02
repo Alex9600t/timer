@@ -3,3 +3,22 @@ body {
 
     color: rgb(255, 255, 255);
 };
+
+.timer_sec {
+
+};
+
+.timer_min {
+
+};
+
+.timer_hour {
+
+};
+
+.does_time {
+    .timer_hour {display: none;};
+    .timer_min {display: none;};
+    .timer_sec {display: none;};
+    .dd {display: none;};
+}

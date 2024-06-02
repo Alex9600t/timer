@@ -1,15 +1,7 @@
-// let currentDate = new Date();
-// // for (i = 1; true; i++){
-// // console.log(currentDate.getFullYear() + ' year');
-// // console.log(currentDate.getMonth() + ' month');
-// // console.log(currentDate.getDate() + ' day');
-// // console.log(currentDate.getHours() + ' hour');
-// // console.log(currentDate.getMinutes() + ' min');
-// // console.log(currentDate.getSeconds() + ' sec');
-// // }
+async function executeTask() {
+    while (true) {
 
-function calculateTime() {
-    const inputElement = document.getElementById('inputiddata');
+        const inputElement = document.getElementById('inputiddata');
     const inputDate = new Date(inputElement.value);
     const currentDate = new Date();
 
@@ -33,14 +25,15 @@ function calculateTime() {
         const timerSecElement = document.querySelector('.timer_sec');
         timerSecElement.textContent = seconds;
 
-        console.log(`Time remaining: ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`);
+        // console.log(`Time remaining: ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`);
     } else {
-        console.log("Дата уже прошла.");
+        const timerDayElement = document.querySelector('.timer_day');
+        timerDayElement.textContent = "Дата уже прошла";
+        document.querySelector.body.classList.toggle('does_time');
+    }
+        
+        await new Promise(resolve => setTimeout(resolve, 1000));
     }
 }
 
-
-function changeTimerDay() {
-    const timerDayElement = document.querySelector('.timer_day');
-    timerDayElement.textContent = "10";
-}
+executeTask();
