@@ -29,7 +29,7 @@ async function executeTask() {
     } else {
         const timerDayElement = document.querySelector('.timer_day');
         timerDayElement.textContent = "Дата уже прошла";
-        document.querySelector.body.classList.toggle('does_time');
+        // document.querySelector.body.classList.toggle('does_time');
     }
         
         await new Promise(resolve => setTimeout(resolve, 1000));
