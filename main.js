@@ -27,8 +27,8 @@ async function executeTask() {
 
         // console.log(`Time remaining: ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`);
     } else {
-        // const timerDayElement = document.querySelector('.timer_day');
-        // timerDayElement.textContent = "Дата уже прошла";
+        const timerDayElement = document.querySelector('.timer_day');
+        timerDayElement.textContent = "Дата уже прошла";
         // document.querySelector.body.classList.toggle('does_time');
     }
         
