@@ -1,8 +1,22 @@
-body {
-    background-color: rgb(35, 35, 35);
+.time {
+    display: flex;
+    align-items: center;
+    font-size: 24px; /* Adjust font-size as needed */
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
 
-    color: rgb(255, 255, 255);
-};
+body {
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px; /* Закругление углов */
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.time > div {
+    margin: 0 4px; /* Adjust margin to space out the elements as needed */
+}
 
 .timer_sec {
 
@@ -15,10 +29,3 @@ body {
 .timer_hour {
 
 };
-
-.does_time {
-    .timer_hour {display: none;};
-    .timer_min {display: none;};
-    .timer_sec {display: none;};
-    .dd {display: none;};
-}

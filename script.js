@@ -1,3 +1,5 @@
+document.body.style.backgroundColor = "rgb(35, 35, 35)";
+
 async function executeTask() {
     while (true) {
 
@@ -12,6 +14,13 @@ async function executeTask() {
         const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+        document.getElementById("min").style.display = "flex";
+        document.getElementById("sec").style.display = "flex";
+        document.getElementById("hour").style.display = "flex";
+        document.getElementById("tt").style.display = "flex";
+        document.getElementById("tt2").style.display = "flex";
+        document.getElementById("days_text_id").style.display = "flex";
 
         const timerDayElement = document.querySelector('.timer_day');
         timerDayElement.textContent = days;
@@ -29,7 +38,12 @@ async function executeTask() {
     } else {
         const timerDayElement = document.querySelector('.timer_day');
         timerDayElement.textContent = "Дата уже прошла";
-        // document.querySelector.body.classList.toggle('does_time');
+        document.getElementById("min").style.display = "none";
+        document.getElementById("sec").style.display = "none";
+        document.getElementById("hour").style.display = "none";
+        document.getElementById("tt").style.display = "none";
+        document.getElementById("tt2").style.display = "none";
+        document.getElementById("days_text_id").style.display = "none";
     }
         
         await new Promise(resolve => setTimeout(resolve, 1000));
